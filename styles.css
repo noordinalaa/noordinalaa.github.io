@@ -120,4 +120,16 @@ section {
 }
 
 .project:hover {
-    transfo
+    transform: translateY(-5px);
+}
+
+.contact a {
+    text-decoration: none;
+    color: #1db954;
+}
+
+footer {
+    background: #222;
+    text-align: center;
+    padding: 15px;
+}
