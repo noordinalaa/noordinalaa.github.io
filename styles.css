@@ -1,31 +1,32 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #121212;
+    color: #fff;
 }
 
 header {
-    background-color: #222;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 30px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-}
-
-nav {
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
     align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .nav-links {
@@ -40,7 +41,6 @@ nav {
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
     transition: 0.3s;
 }
 
@@ -49,25 +49,33 @@ nav {
 }
 
 .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
     text-align: center;
-    padding: 150px 20px;
-    background: #1db954;
-    color: white;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
 }
 
 .hero h1 {
     font-size: 3em;
 }
 
-.hero p {
-    font-size: 1.2em;
+.hero h1 span {
+    color: #1db954;
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: white;
-    color: #1db954;
+    background: #1db954;
+    color: white;
     text-decoration: none;
     margin-top: 15px;
     border-radius: 5px;
@@ -75,45 +83,41 @@ nav {
 }
 
 .btn:hover {
-    background: #f5f5f5;
+    background: #17a34a;
 }
 
 section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
-.skills ul {
-    list-style: none;
-    padding: 20px;
+.skills .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
-.skills li {
-    display: inline-block;
-    background: #222;
-    color: white;
+.skill-list span {
+    background: #333;
     padding: 10px 20px;
-    margin: 5px;
     border-radius: 5px;
 }
 
-.projects .project {
-    background: white;
-    padding: 20px;
-    margin: 10px auto;
-    width: 80%;
-    border-radius: 10px;
+.project-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.contact a {
-    text-decoration: none;
-    color: #1db954;
-}
-
-footer {
+.project {
     background: #222;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s;
 }
+
+.project:hover {
+    transfo
